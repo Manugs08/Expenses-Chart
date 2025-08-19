@@ -83,6 +83,12 @@ img{
     cursor: pointer;
     text-align: start;
 }
+.day:hover{
+    background-color: rgba(236, 119, 95, 0.8);
+}
+.day:hover .amount{
+    display: block;
+}
 .dayOfWeek{
     position: absolute;
     bottom: -25px;
@@ -102,6 +108,7 @@ img{
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
+    display: none;
 }
 .day:nth-child(3){
     background-color: var(--Blue300);

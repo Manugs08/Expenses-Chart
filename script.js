@@ -16,16 +16,8 @@ const leer = async()=>{
             const amount= document.createElement("span")
             amount.textContent=`$${datos.data[i].amount}`;
             amount.classList.add("amount");
-            let click=false;
-            g.addEventListener("click",()=>{
-                if(!click){
-                    g.appendChild(amount);
-                    click=true;
-                } else {
-                    g.removeChild(amount);
-                    click=false;
-                }
-            })
+            g.appendChild(amount);
+            
         })
     } catch(e){
         console.log(e);
