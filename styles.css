@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    --Red500: hsl(10, 79%, 65%);
+    --Blue300: hsl(186, 34%, 65%);
+    --Brown950: hsl(25, 47%, 15%);
+    --Brown400: hsl(28, 10%, 53%);
+    --Red100: hsl(26, 66%, 93%);
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--Red100);
+    color:var(--Brown950)
+}
+
+body,div,h2,h3,span,p,img{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px
+}
+
+.balance-container{
+    display: flex;
+    width: 350px;
+    background-color: var(--Red500);
+    padding: 18px;
+    justify-content: space-between;
+    border-radius: 12px;
+    color:var(--Red100)
+}
+
+.myBalance{
+    display: flex;
+    flex-direction: column;
+    gap:4px
+}
+.myBalance p{
+    font-size: 15px;
+}
+.balance{
+    font-size: 25px;
+    font-weight: 700;
+}
+img{
+    transform: scale(.8);
+}
+
+.spending-container{
+    width: 350px;
+    background-color: #ffffff;
+    padding: 23px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.graph-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    border-bottom: 1px solid var(--Red100);
+    height: 200px; 
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.day{
+    width: 32px; 
+    background-color: var(--Red500); 
+    height: 0; 
+    transition: height 0.5s ease; 
+    font-size: 13px;
+    color:var(--Brown400);
+    position: relative;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: start;
+}
+.dayOfWeek{
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: max-content;
+}
+
+.amount{
+    background-color: var(--Brown950);
+    color:var(--Red100);
+    padding: 4px;
+    border-radius: 5px;
+    position: absolute;
+    top:-35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+.day:nth-child(3){
+    background-color: var(--Blue300);
+}
+.total-container{
+    display: flex;
+    justify-content: space-between;
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    gap:3px
+}
+
+.totalSum{
+    font-size: 30px;
+    font-weight: 700;
+}
+.totalMonth{
+    color:var(--Brown400);
+    font-size: 15px;
+}
+.lastMonth{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.lastMonth span{
+    font-weight: 700;
+}
+.lastMonth p{
+    color:var(--Brown400);
+    font-size: 14px;
+}
